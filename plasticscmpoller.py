@@ -78,7 +78,7 @@ class XyResult:
 # @brief Plastic SCM connector via plastic CLI wrapper.
 class XyPlasticScm:
 	## Constructor required, not a pure staticmethod class.
-	def __init__(self, root, repo_='FRVContent', branch_='main'):
+	def __init__(self, root, repo_='repo', branch_='main'):
 		## Application name.
 		self.__cm = 'cm'
 
@@ -513,7 +513,6 @@ class PlasticPoller(base.PollingChangeSource, StateMixin):
 		# we need to call into another script to handle all this as twisted can not or should not.
 		# self.cmbin = cmbin
 		self.cmbin = '/usr/bin/python'
-		self.cmscript = '/home/thendrix/Work/PaddleCreekGames/pcg-buildbot/master2/XyPlasticScmUtil.py'
 		self.workdir = workdir
 		self.usetimestamps = usetimestamps
 		self.category = category
